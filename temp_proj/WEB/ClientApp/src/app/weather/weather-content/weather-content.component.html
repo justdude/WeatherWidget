@@ -1,0 +1,16 @@
+<div>
+    <div  class="jumbotron">
+        <h1 class="display-4 text-center">Weather single page application written on Angular</h1>
+        <p class="lead">Please, input text below and click button for observe weather for your location</p>
+    </div>
+    <app-weather-input (onSearchEvent)="loadWeather($event)"> </app-weather-input>
+    <div class="weather-container" *ngIf="!isLoading">
+        <div class="" *ngFor="let item of weatherInfos">
+            <app-weather-element [info]="item"></app-weather-element>
+        </div>
+    </div>
+    <div *ngIf="isLoading">
+        <p>Loading data in progress</p>
+    </div>
+</div>
+
