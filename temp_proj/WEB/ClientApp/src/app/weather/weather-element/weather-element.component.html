@@ -1,16 +1,14 @@
 <div class="weather-day-container">
-    <div class="text-center ">
-        <p class="h5 caps"> {{getDay(info.date)}}</p>
-       
+    <div class="text-center">
+        <p class="h5 caps">{{ getDay(info.date) }}</p>
     </div>
     <div class="text-center">
-        <p class="h6 caps">{{ this.getDateFormat(info.date)}}</p>
+        <p class="h6 caps">{{ getDateFormat(info.date) }}</p>
     </div>
     <div class="weather-body">
         <div class="picture"></div>
-        <div class="text text-center" style="margin-top:20px">
-            <p>{{info.text}}</p>
+        <div class="text text-center">
+            <p>{{ info.text }}</p>
         </div>
     </div>
-
 </div>

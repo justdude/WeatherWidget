@@ -1,27 +1,28 @@
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.weather-day-container{
+.weather-day-container {
     background-color: #ababab;
     color: white;
     width: 140px;
     height: 260px;
     margin: 5px;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
-.weather-day-container .weather-body{
+.weather-day-container .weather-body {
     height: 80px;
 }
 
-.weather-day-container .weather-body .picture{
+.weather-day-container .weather-body .picture {
     height: 80%;
 }
 
-.weather-day-container .weather-body .text{
+.weather-day-container .weather-body .text {
     height: 20%;
 }
+
 .caps {
     text-transform: capitalize;
 }
