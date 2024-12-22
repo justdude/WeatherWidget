@@ -8,28 +8,31 @@ import { FetchingWeatherService, WeatherInfo } from '../../services/fetching-wea
   styleUrls: ['./weather-content.component.css']
 })
 export class WeatherContentComponent implements OnInit {
-  // private location:string;  
-  public isLoading:boolean;
+  // private location:string;
+  public isLoading: boolean;
   public weatherInfos: WeatherInfo[];
 
-  constructor(private weatherService:FetchingWeatherService) { 
+  constructor(private weatherService: FetchingWeatherService){
     this.isLoading = false;
    }
 
   ngOnInit() {
-    this.loadWeather("London");
+    this.loadWeather('London');
   }
 
-  loadWeather(location:string){
+  loadWeather(location: string){
     this.setLoading(true);
     this.weatherService.fetchForecast(location)
     .subscribe(result => {
       this.weatherInfos = result;
       this.setLoading(false);
-    }, error => {console.error(error); this.setLoading(false)});
+    }, error => {
+      console.error(error);
+      this.setLoading(false);
+    });
   }
 
-  setLoading(isLoading:boolean){
-    this.isLoading = isLoading; 
+  setLoading(isLoading: boolean){
+    this.isLoading = isLoading;
   }
 }
