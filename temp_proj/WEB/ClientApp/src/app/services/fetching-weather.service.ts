@@ -56,7 +56,7 @@ export class FetchingWeatherService {
         const weatherInfo: WeatherInfo = {
           date,
           day: item.day,
-          code: item.code ?? null,
+          code: item.code,
           text: item.text,
           high: item.high,
           low: item.low,
